@@ -1,0 +1,15 @@
+project: somajo
+target: somajo
+
+image: ghcr.io/ebell495/somajo:latest
+duration: 300
+
+# tasks:
+#   # Explotablity was not working
+#   - name: regression_testing
+#   - name: behavior_testing
+
+
+cmds:
+    - cmd: fuzz/fuzz.py
+      libfuzzer: true
